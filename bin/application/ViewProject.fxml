@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="809.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewProjectController">
+   <children>
+      <Button fx:id="backButton" layoutX="24.0" layoutY="526.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="59.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="projectNameLabel" layoutX="38.0" layoutY="37.0" text="ProjectName">
+         <font>
+            <Font name="Verdana Bold" size="20.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPane" layoutX="24.0" layoutY="71.0" prefHeight="454.0" prefWidth="769.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="566.0">
+               <children>
+                  <VBox fx:id="vbox" prefHeight="526.0" prefWidth="739.0">
+                     <children>
+                        <Label text="Effort Logs">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="effortLogsTable" prefHeight="206.0" prefWidth="445.0">
+                          <columns>
+                              <TableColumn fx:id="logIDCol" prefWidth="75.0" text="Log ID" />
+                            <TableColumn fx:id="lifeCycleCol" prefWidth="75.0" text="Life Cycle" />
+                            <TableColumn fx:id="effortCatCol" prefWidth="106.4000244140625" text="Effort Category" />
+                              <TableColumn fx:id="deliverableCol" prefWidth="75.0" text="Deliverable" />
+                              <TableColumn fx:id="dateCol" prefWidth="75.0" text="Date" />
+                              <TableColumn fx:id="startCol" prefWidth="75.0" text="Start Time" />
+                              <TableColumn fx:id="stopCol" prefWidth="75.0" text="Stop Time" />
+                          </columns>
+                        </TableView>
+                        <Label>
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label text="Defect Logs">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="defectLogTable" prefHeight="206.0" prefWidth="445.0">
+                           <columns>
+                              <TableColumn fx:id="defectIDCol" prefWidth="75.0" text="Defect ID" />
+                              <TableColumn fx:id="defectCol" prefWidth="75.0" text="Defect" />
+                              <TableColumn fx:id="detailsCol" prefWidth="153.5999755859375" text="Details" />
+                              <TableColumn fx:id="injectedCol" minWidth="0.0" prefWidth="76.79998779296875" text="Injected" />
+                              <TableColumn fx:id="removedCol" prefWidth="88.0" text="Removed" />
+                              <TableColumn fx:id="categoryCol" prefWidth="101.60003662109375" text="Category" />
+                              <TableColumn fx:id="statusCol" prefWidth="75.20001220703125" text="Status" />
+                              <TableColumn fx:id="fixCol" prefWidth="94.39996337890625" text="Fix" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
